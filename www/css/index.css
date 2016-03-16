@@ -1,0 +1,32 @@
+#aguarde {
+    min-height: 400px;
+
+    background-image: url("../img/loading2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.ui-panel-inner a{
+    color: #e8554e !important;
+}
+hr{
+    border-top: 1px dashed #999!important;
+}
+
+.ui-header{
+    background-color:  #e8554e!important;
+    color: #FFF!important;
+    text-shadow: none!important;
+}
+
+.ui-btn-icon-left::after, .ui-btn-icon-right::after, .ui-btn-icon-top::after, .ui-btn-icon-bottom::after, .ui-btn-icon-notext::after {
+    background-color: #e8554e !important;
+}
+
+
+#menu-footer{
+    font-size: 11px;
+    margin:  50px 0;
+    display: block;
+}

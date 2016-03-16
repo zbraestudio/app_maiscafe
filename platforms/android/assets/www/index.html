@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mais Café</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- include source files here... -->
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script src="PushNotification.js"></script>
+    <script src="js/gcm_pushplugin.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/base.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+
+    <div data-role="panel" id="menu">
+        <p>De segunda à sexta, um café da manhã frequinho pra você.</p>
+
+        <h4>às segundas</h4>
+        <p><a href="http://www.maiscafe.blog.br/cadernos/cronicas-de-segunda" class="externo">Crônicas de Segunda</a>, por Tihh Gonçalves</p>
+        <hr>
+        <h4>às terças</h4>
+        <p><a href="http://www.maiscafe.blog.br/cadernos/super-semana" class="externo">Super Semana</a>, por Maurício dos Santos</strong></p>
+        <hr>
+        <h4>às quartas</h4>
+        <p><a href="http://www.maiscafe.blog.br/cadernos/classico" class="externo">Dia de Clássico</a></p>
+        <hr>
+        <h4>às quintas</h4>
+        <p><a href="http://www.maiscafe.blog.br/cadernos/cafe-subversivo" class="externo">Café Subversivo</a>, por Dom Will</strong></p>
+        <hr>
+        <h4>às sextas</h4>
+        <p><a href="http://www.maiscafe.blog.br/cadernos/sdr" class="externo">Sexo, Drogas e Rock'n Roll</a>, por Cas de Aquino</strong></p>
+        <hr>
+
+        <span id="menu-footer" >Desenvolvido por <a href="http://www.zbraestudio.com.br" class="externo">Z.BRA Estúdio</a><br>vs. 0.0.2</span>
+
+    </div>
+
+
+
+
+
+    <div data-role="header" data-position="fixed">
+        <a href="#menu" data-icon="home" data-iconpos="notext">Menu</a>
+        <a href="#" class="refresh" data-icon="refresh" data-iconpos="notext">Menu</a>
+
+        <h1>Mais Café</h1>
+
+
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+
+
+        <div id="aguarde"></div>
+        <ul id="saidaTxt" data-role="listview" data-inset="true" style="display: none;">
+
+
+
+        </ul>
+
+
+
+
+
+
+
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>maiscafe.blog.br</h4>
+        <ul id="app-status-ul" style="display:none;"></ul>
+    </div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+
+   if(typeof cordova !== "undefined"){
+       app.initialize();
+       //alert(cordova.platformId);
+   } else {
+       alert('PC!');
+       //se estamos no PC, carrega algumas coisas...
+       onDeviceReady();
+   }
+
+
+
+
+</script>
+
+</body>
+</html>
