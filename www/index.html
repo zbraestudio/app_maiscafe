@@ -6,7 +6,6 @@
     <title>Mais Café</title>
 
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
@@ -43,7 +42,7 @@
         <p><a href="http://www.maiscafe.blog.br/cadernos/sdr" class="externo">Sexo, Drogas e Rock'n Roll</a>, por Cas de Aquino</strong></p>
         <hr>
 
-        <span id="menu-footer" >Desenvolvido por <a href="http://www.zbraestudio.com.br" class="externo">Z.BRA Estúdio</a><br>vs. 0.0.2</span>
+        <span id="menu-footer" >Desenvolvido por <a href="http://www.zbraestudio.com.br" class="externo">Z.BRA Estúdio</a><br>vs. 0.0.4 beta</span>
 
     </div>
 
@@ -88,6 +87,7 @@
 
 
 <script type="text/javascript" src="cordova.js"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 
@@ -95,7 +95,7 @@
        app.initialize();
        //alert(cordova.platformId);
    } else {
-       alert('PC!');
+       //alert('PC!');
        //se estamos no PC, carrega algumas coisas...
        onDeviceReady();
    }

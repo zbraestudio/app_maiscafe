@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="br.com.zbraestudio.maiscafe" version="0.0.2">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="br.com.zbraestudio.maiscafe" version="0.0.4">
   <name>Mais Café</name>
   <description>App oficial do site Mais Café (www.maiscafe.blog.br)</description>
   <author href="http://www.zbraestudio.com.br" email="contato@zbraestudio.com.br">Z.BRA Estúdio</author>

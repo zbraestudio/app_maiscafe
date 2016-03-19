@@ -29,7 +29,9 @@ function onDeviceReady() {
         $("#app-status-ul").append('<li>Registrando o ' + device.platform + '</li>');
         if (device.platform == 'android' || device.platform == 'Android' ||
             device.platform == 'amazon-fireos' ) {
+
             pushNotification.register(successHandler, errorHandler, {"senderID":"1009576631068","ecb":"onNotification"});		// required!
+
         } else {
             pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
         }
@@ -63,6 +65,7 @@ function onNotificationAPN(e) {
 
 // handle GCM notifications for Android
 function onNotification(e) {
+    alert('RegistraDeviceKey()');
     $("#app-status-ul").append('<li>EVENTO -> RECEBIDO:' + e.event + '</li>');
 
     switch( e.event )
@@ -124,6 +127,7 @@ function tokenHandler (result) {
 }
 
 function successHandler (result) {
+    alert('successHandler()');
     $("#app-status-ul").append('<li>sucesso:'+ result +'</li>');
 }
 
@@ -143,6 +147,8 @@ function RegistraDeviceKey(devicekey){
 
     //http://app.maiscafe.blog.br/devicekey/json.php
 
+    alert('registrando');
+
     $.ajax({
         dataType: "json",
         type: "POST",
@@ -157,7 +163,7 @@ function RegistraDeviceKey(devicekey){
         url:'http://app.maiscafe.blog.br/devicekey/json.php',
         success: function(result){
 
-            //alert("Status: " +  result.status +  "\r\n Erro:" + result.erro);
+            alert("Status: " +  result.status +  "\r\n Erro:" + result.erro);
 
         }
     });
