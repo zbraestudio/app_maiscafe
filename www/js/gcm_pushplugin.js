@@ -2,7 +2,7 @@ var pushNotification;
 
 function onDeviceReady() {
 
-    alert('entrou no onDeviceReady()');
+    //alert('entrou no onDeviceReady()');
 
     $("#app-status-ul").append('<li>Device ok. Evento ativado.</li>');
 
