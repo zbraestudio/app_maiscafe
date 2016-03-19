@@ -2,11 +2,16 @@ var pushNotification;
 
 function onDeviceReady() {
 
+    alert('entrou no onDeviceReady()');
+
     $("#app-status-ul").append('<li>Device ok. Evento ativado.</li>');
 
 
 
+    /*
+    BOTÃO VOLTAR DO ANDROID
     document.addEventListener("backbutton", function(e)
+
     {
         $("#app-status-ul").append('<li>backbutton clicado.</li>');
 
@@ -22,6 +27,7 @@ function onDeviceReady() {
             navigator.app.backHistory();
         }
     }, false);
+    */
 
     try
     {
@@ -30,7 +36,7 @@ function onDeviceReady() {
         if (device.platform == 'android' || device.platform == 'Android' ||
             device.platform == 'amazon-fireos' ) {
 
-            pushNotification.register(successHandler, errorHandler, {"senderID":"1009576631068","ecb":"onNotification"});		// required!
+            pushNotification.register(successHandler, errorHandler, {"senderID":"293772200411","ecb":"onNotification"});		// required!
 
         } else {
             pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
@@ -65,7 +71,7 @@ function onNotificationAPN(e) {
 
 // handle GCM notifications for Android
 function onNotification(e) {
-    alert('RegistraDeviceKey()');
+    //alert('RegistraDeviceKey()');
     $("#app-status-ul").append('<li>EVENTO -> RECEBIDO:' + e.event + '</li>');
 
     switch( e.event )
@@ -127,7 +133,7 @@ function tokenHandler (result) {
 }
 
 function successHandler (result) {
-    alert('successHandler()');
+    //alert('successHandler()');
     $("#app-status-ul").append('<li>sucesso:'+ result +'</li>');
 }
 
@@ -139,15 +145,13 @@ function errorHandler (error) {
 document.addEventListener('deviceready', onDeviceReady, true);
 
 
-
-
 //Registra Device Key
 
 function RegistraDeviceKey(devicekey){
 
     //http://app.maiscafe.blog.br/devicekey/json.php
 
-    alert('registrando');
+    //alert('registrando');
 
     $.ajax({
         dataType: "json",
@@ -163,7 +167,7 @@ function RegistraDeviceKey(devicekey){
         url:'http://app.maiscafe.blog.br/devicekey/json.php',
         success: function(result){
 
-            alert("Status: " +  result.status +  "\r\n Erro:" + result.erro);
+            //alert("Status: " +  result.status +  "\r\n Erro:" + result.erro);
 
         }
     });
