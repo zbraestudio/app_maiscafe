@@ -36,10 +36,10 @@ function onDeviceReady() {
         if (device.platform == 'android' || device.platform == 'Android' ||
             device.platform == 'amazon-fireos' ) {
 
-            pushNotification.register(successHandler, errorHandler, {"senderID":"293772200411","ecb":"onNotification"});		// required!
+            pushNotification.register(successHandler, errorHandler, {"senderID":"293772200411","ecb":"onNotification", icon : "icon"});		// required!
 
         } else {
-            pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
+            pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN", icon : "icon"});	// required!
         }
     }
     catch(err)
